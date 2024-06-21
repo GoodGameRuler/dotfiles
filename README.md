@@ -7,3 +7,6 @@
 ### Dependencies
 
 ``` Python 3.12.0, Java 20, Node.JS 20, Rust,  ```
+
+Pulling the repo
+``` git clone --recursive```
