@@ -1,0 +1,19 @@
+# Themes
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+    # "~/.config/alacritty/themes/themes/rose-pine-moon.toml"
+]
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+dimensions = { columns = 720, lines = 1080 }
+# opacity = 0.8
+blur = true
+
+[font]
+size = 10
+
+[mouse]
+hide_when_typing = true

@@ -1,0 +1,12 @@
+configuration {
+    modes: [ window, run, drun, ssh, combi ];
+    combi-modes: [ window, drun, run ];
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     true;
+}
+
+@theme "~/.config/rofi/gruvbox-material.rasi"
