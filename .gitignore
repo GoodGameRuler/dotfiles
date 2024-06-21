@@ -1,10 +1,16 @@
 # Ignore everything
-*
+/*
 
-# But not these files...
+# Includelist some files
 !.gitignore
 !.zshrc
-# etc...
+!.gitconfig
 
-# ...even if they are in subdirectories
-# !*/
+!README.md
+
+!.config
+.config/*
+!.config/alacritty
+!.config/rofi
+!.config/zellij
+!.config/polybar
