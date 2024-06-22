@@ -6,7 +6,11 @@
 
 ### Dependencies
 
-``` Python 3.12.0, Java 20, Node.JS 20, Rust,  ```
+``` sudo pacman install pyenv nvm go ```
+
+- Install rust from rustup source
+
+``` sudo pacman install rofi alacritty polybar neovim zsh ```
 
 Pulling the repo
 ``` git clone --recursive```
