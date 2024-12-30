@@ -9,6 +9,7 @@
 
 !.config/tmux
 !.config/tmux/*
+.config/tmux/plugins/*
 
 !.config/ranger
 !.config/ranger/*
