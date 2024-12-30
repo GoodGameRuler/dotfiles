@@ -1,4 +1,4 @@
-**/*
+*
 
 !.gitconfig
 !.gitignore
@@ -6,8 +6,9 @@
 !.zshrc
 
 !.config/
-.config/**
 
-# !.config/nvim/
-!.config/tmux/
-!.config/ranger/
+!.config/tmux
+!.config/tmux/*
+
+!.config/ranger
+!.config/ranger/*
