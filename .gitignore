@@ -8,6 +8,6 @@
 !.config/
 .config/**
 
-!.config/nvim/
+# !.config/nvim/
 !.config/tmux/
 !.config/ranger/
