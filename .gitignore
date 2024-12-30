@@ -13,3 +13,6 @@
 
 !.config/ranger
 !.config/ranger/*
+
+!.config/alacritty
+!.config/alacritty/*

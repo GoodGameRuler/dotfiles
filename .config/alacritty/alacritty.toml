@@ -1,0 +1,26 @@
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+
+[window]
+# window.dimensions = { columns = 720, lines = 1080 }
+padding = {x = 1, y = 1 }
+dynamic_padding = true
+opacity = 0.95
+blur = true
+#
+[font]
+normal = { family = "SauceCodeProNerdFont", style = "Regular" }
+size = 6
+
+[mouse]
+hide_when_typing = true
+
+[general]
+# Themes
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+    # "~/.config/alacritty/themes/themes/rose-pine-moon.toml"
+]
+
+[terminal]
