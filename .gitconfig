@@ -1,0 +1,51 @@
+[init]
+	defaultBranch = main
+[user]
+	email = udit.samant@gmail.com
+	name = Udit
+[push]
+	autoSetupRemote = true
+[alias]
+    aa = add .
+    a = add
+
+	s = status -s
+	sl = status
+    su = status -u # untracked files
+
+	pb = pull --rebase
+    pf = pull --ff
+    pu = push
+
+	b = branch
+	bc = checkout
+    bn = checkout -b
+	bnt = checkout -b -t
+	ba = branch -a
+    bup = branch --set-upstream-to
+
+	c = commit -m
+	ac = commit -a -m
+    ce = commit --amend
+    ca = commit --amend --no-edit
+
+    e = config --global --edit
+    edit = config --global --edit
+    conf = config --global --edit
+
+    res = reset HEAD
+    di = diff HEAD
+
+    mg = merge
+    mr = merge --rebase
+    mf = merge --ff-only
+    mnc = merge --no-commit --no-ff
+
+    rb = rebase
+    rbq = rebase --abort
+    rbc = rebase --continue
+    rbs = rebase --skip
+[core]
+	editor = nvim
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential

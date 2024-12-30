@@ -1,0 +1,13 @@
+**/*
+
+!.gitconfig
+!.gitignore
+
+!.zshrc
+
+!.config/
+.config/**
+
+!.config/nvim/
+!.config/tmux/
+!.config/ranger/
