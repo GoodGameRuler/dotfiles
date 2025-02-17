@@ -6,8 +6,9 @@
 [push]
 	autoSetupRemote = true
 [alias]
-    aa = add .
     a = add
+    aa = add .
+    au = restore --staged
 
 	s = status -s
 	sl = status
@@ -20,6 +21,7 @@
 	b = branch
 	bc = checkout
     bn = checkout -b
+    bd = checkout -D
 	bnt = checkout -b -t
 	ba = branch -a
     bup = branch --set-upstream-to
