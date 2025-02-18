@@ -23,6 +23,6 @@
 !.config/ghostty/*
 !.config/ghostty/**
 
-!.config/aweseome
-!.config/aweseome/**
-!.config/aweseome/**
+!.config/awesome
+!.config/awesome/**
+!.config/awesome/**
