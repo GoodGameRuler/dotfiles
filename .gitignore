@@ -13,6 +13,16 @@
 
 !.config/ranger
 !.config/ranger/*
+!.config/ranger/**
 
 !.config/alacritty
 !.config/alacritty/*
+!.config/alacritty/**
+
+!.config/ghostty
+!.config/ghostty/*
+!.config/ghostty/**
+
+!.config/aweseome
+!.config/aweseome/**
+!.config/aweseome/**
