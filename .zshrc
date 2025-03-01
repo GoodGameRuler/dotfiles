@@ -5,7 +5,7 @@ source ~/.bashrc
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=** r:|=**'
 zstyle ':completion:*' max-errors 3
-zstyle :compinstall filename '/home/udit/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -82,11 +82,11 @@ export ZK_NOTEBOOK_DIR="~/Norg"
 
 ### PATH
 # Optimising For
-export PATH=$PATH:~/.local/share/bob/nightly/nvim-linux64/bin
+export PATH=$PATH:~/.local/share/bob/nvim-bin
 
 # Rergular
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH;
-export PATH=/home/udit/go/bin:$PATH;
+export PATH=$HOME/go/bin:$PATH;
 
 export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH;
 
@@ -114,11 +114,11 @@ alias container='make -C ~/Projects/seL4-CAmkES-L4v-dockerfiles user HOST_DIR=$(
 
 
 ## Run tmux if interactive and not already open
-case $- in *i*)
-    if [ -z "$TMUX" ]; then tmux new -A -s default ; fi;;
-esac
+# case $- in *i*)
+#     if [ -z "$TMUX" ]; then tmux new -A -s default ; fi;;
+# esac
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-alias config='/usr/bin/git --git-dir=/home/udit/.cfg/ --work-tree=/home/udit'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
