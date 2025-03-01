@@ -67,6 +67,9 @@ alias t="tree -CL 3"
 alias cl="clear -x"
 alias cls=clear
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="
   --walker-skip .git,node_modules,target
