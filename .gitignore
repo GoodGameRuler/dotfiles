@@ -13,6 +13,10 @@
 !.config/nvim/*
 !.config/nvim/**
 
+!.config/afx
+!.config/afx/*
+!.config/afx/**
+
 !.config/tmux
 !.config/tmux/*
 !.config/tmux/**
