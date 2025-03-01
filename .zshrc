@@ -96,6 +96,7 @@ export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH;
 export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH;
 
 export PATH=$PATH:~/Progs/miniconda3/bin
+export PATH=$PATH:~/.cargo/bin
 
 export XDG_CONFIG_HOME="$HOME/.config"
 

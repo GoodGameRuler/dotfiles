@@ -1,3 +1,4 @@
-#!/bin/zash
+#!/bin/zsh
 
-yay bob zsh-auto-suggestions zsh-syntax-highlight nvm github-cli
+sudo pacman -S tree
+yay bob zsh-auto-suggestions zsh-syntax-highlight nvm github-cli fd
