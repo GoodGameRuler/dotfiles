@@ -8,8 +8,13 @@
 !.config/
 !.config/configure.sh
 
+!.config/nvim
+!.config/nvim/*
+!.config/nvim/**
+
 !.config/tmux
 !.config/tmux/*
+!.config/tmux/**
 .config/tmux/plugins/*
 
 !.config/ranger
