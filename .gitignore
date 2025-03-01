@@ -4,6 +4,7 @@
 !.gitignore
 
 !.zshrc
+!.zsh_plugins
 
 !.config/
 !.config/configure.sh
