@@ -61,6 +61,7 @@ PROMPT='%B%F{green}${PWD/#$HOME/~} %F{white}$%F{reset_color} ${vcs_info_msg_0_}%
 alias ls="ls --color=always"
 alias la="ls -lA"
 alias nv=nvim
+alias nsb="nvim ~/OrgNotes/"
 alias t="tree -CL 3"
 
 # Clear without clearing scroll
@@ -126,3 +127,5 @@ alias container='make -C ~/Projects/seL4-CAmkES-L4v-dockerfiles user HOST_DIR=$(
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+. "$HOME/.local/bin/env"
