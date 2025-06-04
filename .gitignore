@@ -35,5 +35,9 @@
 !.config/ghostty/**
 
 !.config/awesome
+!.config/awesome/*
 !.config/awesome/**
-!.config/awesome/**
+
+!.config/hypr
+!.config/hypr/*
+!.config/hypr/**
