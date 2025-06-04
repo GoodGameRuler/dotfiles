@@ -61,8 +61,20 @@ PROMPT='%B%F{green}${PWD/#$HOME/~} %F{white}$%F{reset_color} ${vcs_info_msg_0_}%
 alias ls="ls --color=always"
 alias la="ls -lA"
 alias nv=nvim
+alias hx=helix
 alias nsb="nvim ~/OrgNotes/"
 alias t="tree -CL 3"
+
+alias nts='rg --color=always --line-number --no-heading --smart-case "${*:-}" ~/OrgNotes | fzf --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview "bat --color=always {1} --highlight-line {2}" --bind "enter:become(nvim {1} +{2})"'
+# Mornings Journal
+alias jtm='FILE=~/OrgNotes/journal/mornings/$(date +%Y-%m-%d).md; if [[ ! -f $FILE ]]; then cp ~/OrgNotes/journal/mornings/template.md "$FILE"; fi; nvim "$FILE"'
+alias jtms='rg --files --glob "*.md" ~/OrgNotes/journal/mornings | fzf --preview "bat --style=numbers --color=always {}" --height 40% --reverse'
+alias jtml='nvim "$(ls ~/OrgNotes/journal/mornings/*.md | fzf --preview "bat --style=numbers --color=always ~/OrgNotes/journal/mornings/{}" --height 40% --reverse)"'
+
+# Evenings Journal
+alias jtn='FILE=~/OrgNotes/journal/evenings/$(date +%Y-%m-%d).md; if [[ ! -f $FILE ]]; then cp ~/OrgNotes/journal/evenings/template.md "$FILE"; fi; nvim "$FILE"'
+alias jtns='rg --files --glob "*.md" ~/OrgNotes/journal/evenings | fzf --preview "bat --style=numbers --color=always {}" --height 40% --reverse'
+alias jtnl='nvim "$(ls ~/OrgNotes/journal/evenings/*.md | fzf --preview "bat --style=numbers --color=always ~/OrgNotes/journal/mornings/{}" --height 40% --reverse)"'
 
 # Clear without clearing scroll
 alias cl="clear -x"
@@ -119,9 +131,9 @@ alias container='make -C ~/Projects/seL4-CAmkES-L4v-dockerfiles user HOST_DIR=$(
 
 
 ## Run tmux if interactive and not already open
-# case $- in *i*)
-#     if [ -z "$TMUX" ]; then tmux new -A -s default ; fi;;
-# esac
+case $- in *i*)
+    if [ -z "$TMUX" ]; then ~/Scripts/tmux.sh ; fi;;
+esac
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
