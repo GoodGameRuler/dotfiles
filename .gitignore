@@ -45,3 +45,7 @@
 !.config/wofi
 !.config/wofi/*
 !.config/wofi/**
+
+!.config/waybar
+!.config/waybar/*
+!.config/waybar/**
