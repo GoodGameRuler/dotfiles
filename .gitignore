@@ -6,6 +6,10 @@
 !.zshrc
 !.zsh_plugins
 
+!Scripts
+!Scripts/*
+!Scripts/**
+
 !.config/
 !.config/configure.sh
 
