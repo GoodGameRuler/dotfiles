@@ -41,3 +41,7 @@
 !.config/hypr
 !.config/hypr/*
 !.config/hypr/**
+
+!.config/wofi
+!.config/wofi/*
+!.config/wofi/**

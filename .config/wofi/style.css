@@ -1,0 +1,72 @@
+/*
+* Wofi Frosted Glass Theme (Compact)
+* A subtle frosted glass aesthetic with a balanced neutral tone.
+*/
+
+@define-color base00 rgba(40, 44, 52, 0.9);
+/* Darker frosted background */
+@define-color base01 rgba(50, 54, 62, 0.95);
+@define-color base02 rgba(70, 74, 82, 0.98);
+@define-color text-color #E0E0E0;
+@define-color highlight rgba(100, 130, 160, 0.6);
+@define-color accent #A0C0D0;
+
+window {
+  opacity: 0.97;
+  border: 2px solid @base02;
+  border-radius: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  /* Slightly smaller */
+  background-color: @base00;
+  backdrop-filter: blur(10px);
+  padding: 5px;
+}
+
+#input {
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid @base02;
+  padding: 8px;
+  /* Reduced padding */
+  margin: 0px;
+  font-size: 16px;
+  color: @text-color;
+  background-color: rgba(50, 54, 62, 0.85);
+}
+
+#inner-box {
+  margin: 2px;
+  color: @text-color;
+  background-color: transparent;
+}
+
+#outer-box {
+  margin: 2px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+#selected {
+  background-color: @highlight;
+  color: white;
+  border-radius: 4px;
+}
+
+#entry {
+  padding: 3px;
+  /* Reduced padding */
+  margin: 1px;
+  /* Reduced margin */
+  background-color: transparent;
+}
+
+#scroll {
+  margin: 3px;
+  background-color: transparent;
+}
+
+#text {
+  margin: 0px;
+  padding: 3px;
+  color: @text-color;
+}
