@@ -53,3 +53,7 @@
 !.config/waybar
 !.config/waybar/*
 !.config/waybar/**
+
+~.config/mako
+~.config/mako/*
+~.config/mako/**
