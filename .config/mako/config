@@ -1,0 +1,14 @@
+default-timeout=2000
+max-history=20
+max-visible=5
+
+sort=-time
+layer=overlay
+outer-margin=10
+background-color=#4A607C90
+border-radius=10
+on-button-left=dismiss
+on-button-right=invoke-default-action
+on-button-middle=exec makoctl menu -n "$id" dmenu 'Select action: '
+format=<b>%a</b>\n%s\n%b
+icon-path=/usr/share/icons/breeze-dark
