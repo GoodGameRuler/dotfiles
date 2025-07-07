@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 default="default"                               # session name
 
-# Attach if session exists
-if tmux has-session -t "$default" 2>/dev/null; then
-    tmux attach -t "$default"
+
+# Attach if session exists but not attatched to
+if tmux has-session -t default 2>/dev/null && ! tmux list-clients -t default | grep -q .; then
+    tmux attach -t default
+    exit
+fi
+
+if tmux list-clients -t default | grep -q .; then
+    echo Tmux is open on another client
     exit
 fi
 
