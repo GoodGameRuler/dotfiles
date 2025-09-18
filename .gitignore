@@ -58,6 +58,8 @@
 !.config/mako/*
 !.config/mako/**
 
+!.config/systemd
+!.config/systemd/user
 !.config/systemd/user/custom
 !.config/systemd/user/custom/*
 !.config/systemd/user/custom/**

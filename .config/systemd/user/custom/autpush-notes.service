@@ -1,0 +1,13 @@
+[Unit]
+Description=Auto push Notes and OrgNotes on shutdown
+DefaultDependencies=no
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecStop=%h/Scripts/autopush_notes.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
