@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto pull Notes and OrgNotes on startup
+DefaultDependencies=no
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/Scripts/autopull_notes.sh
+
+[Install]
+WantedBy=default.target

@@ -85,7 +85,13 @@ function jtw() {
     done
 
     local ref_date=${arg_date:-$(date +%Y-%m-%d)}
-    local sunday=$(date -d "$ref_date last sunday" +%Y-%m-%d)
+    # local sunday=$(date -d "$ref_date last sunday" +%Y-%m-%d)
+    #
+    # Convert ref_date to weekday number: Monday=1 ... Sunday=7
+    local weekday=$(date -d "$ref_date" +%u)
+
+    # Subtract weekday days (so Sunday->7, Monday->1, ...) to go to last Sunday
+    local sunday=$(date -d "$ref_date -$weekday days" +%Y-%m-%d)
 
     if $next; then
         sunday=$(date -d "$sunday +7 days" +%Y-%m-%d)
