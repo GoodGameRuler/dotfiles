@@ -47,6 +47,8 @@
     rbq = rebase --abort
     rbc = rebase --continue
     rbs = rebase --skip
+
+	i = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
 [core]
 	editor = nvim
 	pager = git-split-diffs --color | less -RFX

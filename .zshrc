@@ -8,6 +8,8 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 zstyle ':completion:*' max-errors 3
 zstyle :compinstall filename '$HOME/.zshrc'
 
+fpath+=~/.zfunc
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -89,8 +91,8 @@ export FZF_ALT_C_OPTS="
   --walker-skip .git,node_modules,target
   --preview 'tree -C {}'"
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # export PAGER=most
 export MANPAGER='nvim +Man!'
@@ -117,7 +119,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 source ~/.zsh_plugins
 
-source /usr/share/nvm/init-nvm.sh
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 umirr () {
     sudo reflector --protocol https --connection-timeout 10 --age 24 --completion-percent 97 --latest 200 --fastest 50 --score 10 --sort rate --verbose --save /etc/pacman.d/mirrorlist

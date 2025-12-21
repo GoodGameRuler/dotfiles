@@ -1,0 +1,50 @@
+- name: Dotfile Config Installation
+  hosts: local
+  tasks:
+    - name: Check if .dotfiles repo exists
+      stat:
+        path: "{{ ansible_facts['env']['HOME'] }}/.dotfiles"
+      register: dotfiles_repo
+
+    - name: Clone bare dotfiles repo if missing
+      git:
+        repo: "git@github.com:GoodGameRuler/dotfiles.git"
+        dest: "{{ ansible_facts['env']['HOME'] }}/.dotfiles"
+        bare: yes
+        accept_hostkey: yes
+      when: not dotfiles_repo.stat.exists
+
+    - name: Checkout dotfiles using argv
+      command:
+        argv:
+          - /usr/bin/git
+          - "--git-dir={{ ansible_facts['env']['HOME'] }}/.dotfiles"
+          - "--work-tree={{ ansible_facts['env']['HOME'] }}"
+          - checkout
+      args:
+        chdir: "{{ ansible_facts['env']['HOME'] }}"
+        creates: "{{ ansible_facts['env']['HOME'] }}/.gitconfig"
+      register: checkout_result
+      ignore_errors: yes
+
+    - name: Warn if checkout conflicts
+      debug:
+        msg: "Dotfiles checkout failed, some files may already exist."
+      when: checkout_result.rc != 0
+
+- name: Install Packages
+  hosts: local
+  become: true
+  vars_files:
+    - packages.yml
+  tasks:
+    - name: Include Package Variables
+      include_vars:
+        file: packages.yaml
+        name: packages
+
+    - name: Install system packages
+      package:
+        name: "{{ packages['system_packages'][ansible_pkg_mgr] }}"
+        state: present
+      ignore_errors: yes
